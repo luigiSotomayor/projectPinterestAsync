@@ -1,0 +1,9 @@
+.section_main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 120px 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+}

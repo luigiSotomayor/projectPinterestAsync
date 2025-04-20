@@ -1,0 +1,40 @@
+.visitar {
+    background-color: rgb(189, 15, 15);
+    color: white;
+    position: absolute;
+    z-index: 5;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    border-radius: 30px;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.common_button {
+    background-color: rgba(255, 255, 255, 0.87);
+    color: black;
+    padding: 1px 10px;
+    border: none;
+    border-radius: 30px;
+    transition: all 0.5s;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.common_button:hover {
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width: 580px) {
+    .common_button {
+        display: none;
+    }
+    .visitar {
+        top: 40%;
+    }
+}

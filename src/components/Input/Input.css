@@ -1,0 +1,15 @@
+.common_input {
+    height: 40px;
+    width: 50%;
+    min-width: 200px;
+    background-image: url('src/components/Input/images/lupa.png');
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-size: 16px 16px;   
+    background-color: #ECECEC;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    padding-top: 1px;
+    padding-left: 40px;
+}

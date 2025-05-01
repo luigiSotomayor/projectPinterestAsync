@@ -1,53 +1,35 @@
-import { alertDialog } from "../Funciones/AlertDialog";
-import { Cards } from "../Cards/Cards";
-import { ShowCats } from "../ShowCats/ShowCats";
 import "./Main.css";
+import { api } from "../Funciones/api";
+import { showImg } from "../Funciones/ShowImg";
+import { deleteScreen } from "../Funciones/DeleteScreen";
 
-export const Main = () => {
-  const accessKey = "YCDPHTR2UW5IqNTaWpBeemuwdAYMu-zrDVWff4G5azg";
-  const app = document.querySelector("#app");
-  const main = document.createElement("section");
+export const Main = async () => {
   const input = document.querySelector(".common_input");
-  main.classList.add("section_main");
-  main.id = `mainSection`;
-
-  document.addEventListener(`DOMContentLoaded`, function () {
-    ShowCats();
-  });
-
+  try {
+  const datas = await api("cats");
+  showImg(datas);
+  } catch (error){
+    console.error("Error cargando las imágenes:", error);
+  }
+  
+  let numberOfQueries = 0;
   let query = "";
-  input.addEventListener("keydown", function (event) {
+  input.addEventListener("keydown", async function (event) {
+    const main = document.querySelector(".section_main");
     if (event.key === "Enter") {
+      numberOfQueries++;
       query = event.target.value;
-      const delSection = document.getElementById("deletingSection");
-      if (delSection) {
-        delSection.remove();
-      }
+      deleteScreen();
       main.innerHTML = ``;
-      fetch(`https://api.unsplash.com/photos/random?count=20&query=${query}`, {
-        headers: {
-          Authorization: `Client-ID ${accessKey}`,
-        },
-      })
-        .then((response) => {
-          if (response.status === 404) {
-            ShowCats();
-            alertDialog();
-          } else {
-            return response.json();
-          }
-        })
-        .then((datas) => {
-          event.target.value = "";
-          if (typeof(datas) === "object") {
-            for (const data of datas) {
-              const article = Cards(data);
-              main.append(article);
-            }
-            app.append(main);
-          }
-        })
-        .catch((error) => console.error("Error al cargar la imagen:", error));
+      event.target.value = "";
+      if (numberOfQueries === 1){
+        sessionStorage.setItem('query', query);
+      }
+      const pictures = await api(`${query}`);
+      if (pictures == false){
+      } else {
+        showImg(pictures);
+      }
     }
-  });
+  })
 };

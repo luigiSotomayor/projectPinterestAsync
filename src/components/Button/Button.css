@@ -1,11 +1,13 @@
+
 .visitar {
+    font-family: "Tagesschrift";
     background-color: rgb(189, 15, 15);
     color: white;
     position: absolute;
     z-index: 5;
     top: 45%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     border: none;
     border-radius: 30px;
     width: 80px;
@@ -14,6 +16,7 @@
 }
 
 .common_button {
+    font-family: "Tagesschrift";
     background-color: rgba(255, 255, 255, 0.87);
     color: black;
     padding: 1px 10px;

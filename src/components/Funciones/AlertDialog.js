@@ -8,7 +8,7 @@ export const alertDialog = () => {
     iconColor: "black",
     color: "black",
     animation: "True",
-    imageUrl: "src/components/Main/images/gatitos.jpg",
+    imageUrl: "/images/main/gatitos.jpg",
     imageWidth: 60,
     imageHeight: 60,
     background:" #c58d47",

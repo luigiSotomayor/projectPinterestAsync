@@ -11,7 +11,7 @@ export const Header = () => {
 
   const logo = document.createElement("img");
   logo.id = "logoPinterest";
-  logo.src = "src/components/Header/images/logoPinterest.png";
+  logo.src = "/images/header/logoPinterest.png";
   logo.alt = "Logo de Pinterest";
   logo.addEventListener("click", async function () {
     deleteScreen();
@@ -21,17 +21,17 @@ export const Header = () => {
 
   const iconBell = document.createElement("img");
   iconBell.id = "iconBell";
-  iconBell.src = "src/components/Header/images/bellIcon.png";
+  iconBell.src = "/images/header/bellIcon.png";
   iconBell.alt = "Icono de Campana";
 
   const commentDots = document.createElement("img");
   commentDots.id = "commentDots";
-  commentDots.src = "src/components/Header/images/comment_dots.png";
+  commentDots.src = "/images/header/comment_dots.png";
   commentDots.alt = "Icono de comentarios";
 
   const user = document.createElement("img");
   user.id = "user";
-  user.src = "src/components/Header/images/user.png";
+  user.src = "/images/header/user.png";
   user.alt = "Icono de usuario";
 
   const buttonInicio = Button({ text: "Inicio" });

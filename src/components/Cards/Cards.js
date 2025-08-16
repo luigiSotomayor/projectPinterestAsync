@@ -13,7 +13,7 @@ export const Cards = (data) => {
         <img class="img_user" src="${data.user.profile_image.medium}" alt="Imagen de Usuario" style="border-color: ${data.color}">
         <p class="pName">${data.user.name}</p>
         <div class="divInferior">
-          <img class="icono" src="src/components/Cards/images/icon_upload.png" alt="Icono de Upload">
+          <img class="icono" src="/images/cards/icon_upload.png" alt="Icono de Upload">
           <p class="pFecha">${fechaFormateada}</p>
         </div>
       </section>

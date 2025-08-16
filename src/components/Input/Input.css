@@ -3,7 +3,7 @@
     height: 40px;
     width: 50%;
     min-width: 200px;
-    background-image: url('src/components/Input/images/lupa.png');
+    background-image: url('/images/input/lupa.png');
     background-repeat: no-repeat;
     background-position: 15px center;
     background-size: 16px 16px;   

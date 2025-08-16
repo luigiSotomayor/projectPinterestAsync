@@ -11,11 +11,11 @@ export const InfoHover = ( {type, text} ) => {
 
     p.textContent = text;
     if (type === "numberPhotos"){
-        img.src = "src/components/InfoHover/images/camara.png";
+        img.src = "/images/infohover/camara.png";
         img.alt = "Icono de camara";
         div.classList.add("divCamara");
     } else {
-        img.src = "src/components/InfoHover/images/likes.png";
+        img.src = "/images/infohover/likes.png";
         img.alt = "Icono de Corazón de Likes";
         div.classList.add("divLikes");
     }
